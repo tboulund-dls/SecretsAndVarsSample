@@ -1,0 +1,17 @@
+name: Upload to FTP Server
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  integration:
+    runs-on: ubuntu-lstest
+
+    steps:
+      - name: Printing information
+        run: |
+          echo "my-server"
+          echo "my-username"
+          echo "my-password"
