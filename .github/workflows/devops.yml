@@ -10,8 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Printing information
-        run: |
-          echo "my-server"
-          echo "my-username"
-          echo "my-password"
+      - name: Upload to FTP
+        uses: elgohr/ftp-deploy-action@v1.0.0
+        with:
+          ftp-server: ftp://62.164.217.208
+          ftp-username: my-username
+          ftp-password: super-secret-password
+          local-dir: ./  # Local directory to upload
+          remote-dir: /  # Remote directory to upload to
