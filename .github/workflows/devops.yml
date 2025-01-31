@@ -16,6 +16,6 @@ jobs:
       - name: Upload files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: 62.164.217.208
-          username: my-username
-          password: super-secret-password
+          server: ${{ vars.FTP_SERVER }}
+          username: ${{ vars.FTP_USER }}
+          password: ${{ secrets.FTP_PASSWORD }}
